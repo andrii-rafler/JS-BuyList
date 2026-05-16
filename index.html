@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy List</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+
+<div class="app-container">
+    
+    <main class="content-left">
+        <section class="top-search">
+            <input type="text" placeholder="Назва товару">
+            <button class="add-btn" data-tooltip="Додати">Додати</button>
+        </section>
+        
+        <ul class="product-list">
+            <li class="list-item is-bought">
+                <span class="prod-name">Помідори</span>
+                <div class="amount-block">
+                    <span class="count box">2</span>
+                </div>
+                <div class="action-btns">
+                    <button class="status-btn" data-tooltip="Повернути">Не куплено</button>
+                </div>
+            </li>
+            
+            <li class="list-item">
+                <span class="prod-name">Печиво</span>
+                <div class="amount-block">
+                    <button class="circle-btn minus-btn" data-tooltip="Менше">-</button>
+                    <span class="count">2</span>
+                    <button class="circle-btn plus-btn" data-tooltip="Більше">+</button>
+                </div>
+                <div class="action-btns">
+                    <button class="status-btn" data-tooltip="Купив">Куплено</button>
+                    <button class="circle-btn del-btn" data-tooltip="Прибрати">✖</button>
+                </div>
+            </li>
+            
+            <li class="list-item">
+                <input type="text" class="prod-edit" value="Сир">
+                <div class="amount-block">
+                    <button class="circle-btn minus-btn disabled" data-tooltip="Мінімум" disabled>-</button>
+                    <span class="count">1</span>
+                    <button class="circle-btn plus-btn" data-tooltip="Більше">+</button>
+                </div>
+                <div class="action-btns">
+                    <button class="status-btn" data-tooltip="Купив">Куплено</button>
+                    <button class="circle-btn del-btn" data-tooltip="Прибрати">✖</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <aside class="sidebar">
+        <section class="stat-box">
+            <h2>Залишилося</h2>
+            <div class="labels-wrap">
+                <span class="product-item">
+                    Печиво
+                    <span class="amount">2</span>
+                </span>
+                <span class="product-item">
+                    Сир
+                    <span class="amount">1</span>
+                </span>
+            </div>
+        </section>
+        
+        <section class="stat-box">
+            <h2>Куплено</h2>
+            <div class="labels-wrap">
+                <span class="product-item crossed">
+                    Помідори
+                    <span class="amount">2</span>
+                </span>
+            </div>
+        </section>
+    </aside>
+</div>
+
+<div class="my-badge">
+    <div class="badge-head">Buy List</div>
+    <div class="badge-name">Created by:<br>Andrii Ziulkovskyi</div>
+</div>
+
 </body>
 </html>
